@@ -75,7 +75,8 @@ def test_calculate_hash_of_dir(sample_workflow_workspace):
     shutil.rmtree(sample_workflow_workspace_path)
     shutil.copytree(test_workspace_path, sample_workflow_workspace_path)
     dir_hash = calculate_hash_of_dir(sample_workflow_workspace_path)
-    assert dir_hash == "8d287a3e2240b1762862d485a424363c"
+    # assert dir_hash == "8d287a3e2240b1762862d485a424363c"
+    assert dir_hash == "cb2669b4d7651aa717b6952fce85575f"
     include_only_path = os.path.join(
         sample_workflow_workspace_path, "code", "worldpopulation.ipynb"
     )
